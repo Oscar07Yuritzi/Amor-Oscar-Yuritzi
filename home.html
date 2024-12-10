@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar & Yuritzi - Our Love Story</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body class="home-page">
+    <nav class="navbar">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html" class="active">Inicio</a>
+            <a href="memories.html">Recuerdos</a>
+            <a href="poems.html">Poemas</a>
+            <a href="diary.html">Diario</a>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+    </nav>
+
+    <header class="hero">
+        <h1>Nuestra Historia de Amor</h1>
+        <p>Oscar & Yuritzi</p>
+    </header>
+
+    <main class="main-content">
+        <div class="welcome-message">
+            <h2>Bienvenidos a Nuestro Espacio</h2>
+            <p>Un lugar donde guardamos nuestros momentos más especiales</p>
+        </div>
+        
+        <div class="quick-links">
+            <a href="memories.html" class="quick-link">
+                <div class="quick-link-content">
+                    <h3>Recuerdos</h3>
+                    <p>Nuestras fotos y videos más especiales</p>
+                </div>
+            </a>
+            <a href="poems.html" class="quick-link">
+                <div class="quick-link-content">
+                    <h3>Poemas</h3>
+                    <p>Palabras que expresan nuestro amor</p>
+                </div>
+            </a>
+            <a href="diary.html" class="quick-link">
+                <div class="quick-link-content">
+                    <h3>Diario</h3>
+                    <p>Nuestros pensamientos día a día</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/home.js"></script>
+    <script type="module" src="js/navbar.js"></script>
+</body>
+</html>

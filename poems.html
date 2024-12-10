@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Poemas - Oscar & Yuritzi</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/poems.css">
+</head>
+<body class="poems-page">
+    <!-- Snowflakes -->
+    <div id="snowflakes"></div>
+
+    <!-- Hearts -->
+    <div id="hearts"></div>
+
+    <nav class="navbar">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Inicio</a>
+            <a href="memories.html">Recuerdos</a>
+            <a href="poems.html" class="active">Poemas</a>
+            <a href="diary.html">Diario</a>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+    </nav>
+
+    <main class="poems-content">
+        <h1>Nuestros Poemas</h1>
+        
+        <div class="poems-form">
+            <input type="text" id="poemTitle" placeholder="Título del poema" class="poem-input">
+            <textarea id="poemContent" placeholder="Escribe tu poema aquí..." class="poem-textarea"></textarea>
+            <button id="savePoem" class="save-btn">
+                <span>Guardar Poema</span>
+                <span class="save-icon">❤️</span>
+            </button>
+        </div>
+
+        <div id="poemsContainer" class="poems-grid"></div>
+    </main>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/poems.js"></script>
+    <script type="module" src="js/navbar.js"></script>
+    <script>
+        // Create snowflakes
+        function createSnowflakes() {
+            const snowflakesContainer = document.getElementById('snowflakes');
+            for (let i = 0; i < 50; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.style.left = `${Math.random() * 100}vw`;
+                snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                snowflake.style.opacity = Math.random();
+                snowflake.style.width = snowflake.style.height = `${Math.random() * 0.5 + 0.2}rem`;
+                snowflakesContainer.appendChild(snowflake);
+            }
+        }
+
+        // Create floating hearts
+        function createHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.style.left = `${Math.random() * 100}vw`;
+                heart.style.top = `${Math.random() * 100}vh`;
+                heart.style.animationDelay = `${Math.random() * 4}s`;
+                heartsContainer.appendChild(heart);
+            }
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            createSnowflakes();
+            createHearts();
+        });
+    </script>
+</body>
+</html>

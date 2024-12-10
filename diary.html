@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Diario - Oscar & Yuritzi</title>
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/diary.css">
+</head>
+<body class="diary-page">
+    <nav class="navbar">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Inicio</a>
+            <a href="memories.html">Recuerdos</a>
+            <a href="poems.html">Poemas</a>
+            <a href="diary.html" class="active">Diario</a>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+    </nav>
+
+    <main class="diary-content">
+        <h1>Nuestro Diario</h1>
+        
+        <div class="diary-form">
+            <div class="diary-paper">
+                <div class="paper-content">
+                    <div class="paper-header">
+                        <span class="date"></span>
+                        <span class="author"></span>
+                    </div>
+                    <textarea id="diaryEntry" placeholder="Querido diario..."></textarea>
+                    <button id="saveDiaryEntry" class="save-btn">
+                        <span class="save-text">Guardar</span>
+                        <span class="save-icon">❤️</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="diaryEntries" class="diary-entries"></div>
+    </main>
+
+    <script type="module" src="/js/firebase.js"></script>
+    <script type="module" src="/js/auth.js"></script>
+    <script type="module" src="/js/diary.js"></script>
+    <script type="module" src="/js/navbar.js"></script>
+</body>
+</html>
