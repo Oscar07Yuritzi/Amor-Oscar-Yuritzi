@@ -15,7 +15,7 @@ loginForm.addEventListener('submit', async (e) => {
     
     if (user.email === 'oscar@amor.com' || user.email === 'yuritzi@amor.com') {
       localStorage.setItem('userEmail', user.email);
-      window.location.href = '/home.html';
+      window.location.href = 'home.html';
     } else {
       alert('Usuario no autorizado');
     }
